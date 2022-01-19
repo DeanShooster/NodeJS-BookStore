@@ -1,0 +1,437 @@
+body{
+    margin: 0;
+    font-family: cursive;
+    color:rgba(0,0,0,.6);
+}
+
+img{
+    width: 150px;
+    height: 200px;
+    margin-left: 5px;
+}
+
+h2{
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #bbf1f3;
+    box-shadow: 0px 0px 5px 0px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header>div{
+    width: 100%;
+    font-weight: 1000;
+    font-size: 45px;
+    text-align: center;
+}
+
+#admin_logout{
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0 0 2px black;
+}
+#admin_logout:hover{
+    color:darkorange;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+#admin_controls{
+    width: 100%;
+    height: 225px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.get_set_container{
+    width: 45%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+button{
+    width: 50%;
+    height: 15%;
+    color:rgba(0,0,0,.6);
+    background-color: #bbf1f3;
+    box-shadow: 0px 0px 5px 0px #000000;
+    font-size: 0.7rem;
+    font-weight: 900;
+    margin-bottom: 7.5px;
+    margin-top: 7.5px;
+    border-radius: 5%;
+}
+
+button:hover{
+    cursor: pointer;
+    color:white;
+    background-color: darkorange;
+}
+
+#book_results_container{
+    width: 99%;
+    border: 1px solid white;
+}
+
+.book_result{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.book_result>div{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.book_result>div>p{
+    margin-left: 15px;
+    text-align: center;
+    overflow-wrap:break-word;
+}
+
+#reset_results{
+    font-size: 20px;
+    font-weight: 900;
+    color:rgba(0,0,0,.6);
+    background-color:#bbf1f3;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 3%;
+    margin-left: 45px;
+}
+#reset_results:hover{
+    color:white;
+    background-color: darkorange;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.modal{
+    position: absolute;
+    width: 75%;
+    min-height: 350px;
+    background-color: #84d2d4;
+    box-shadow: 0px 0px 15px 0px #000000;
+    border-radius: 2%;
+    top:25%;
+    left:12.5%;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+}
+.modal>h2{
+    margin:0; margin-bottom: 10px;
+}
+#add_book_form{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+#add_book_form>input{
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+}
+#add_book_form>textarea{
+    width: 80%;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 600;
+}
+#add_book_form>button{
+    width: 25%;
+    height: 25px;
+    font-size: 14px;
+}
+
+#add_book_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#book_cover{
+    margin-top: 5px;
+}
+
+#delete_book_modal{
+    height: 200px;
+}
+
+#delete_book_form{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 20px;
+}
+#delete_book_form>input{
+    align-self: center;
+    width: 75%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#delete_book_form>button{
+    width: 60px;
+    height: 25px;
+    align-self: center;
+}
+#delete_book_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+.search_modal{
+    width: 75%;
+    min-height: 250px;
+    background-color: #84d2d4;
+    box-shadow: 0px 0px 15px 0px #000000;
+    position: absolute;
+    top:25%;
+    left:12.5%;
+    display: flex;
+    flex-flow: column;
+    z-index: 2;
+}
+.search_modal>form{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.search_modal>p{
+    text-align: center;
+}
+
+#get_book_name_form>input{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#get_book_name_form>button{
+    width: 60px;
+    height: 20px;
+}
+
+#get_book_name_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#get_book_author_form>input{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#get_book_author_form>button{
+    width: 60px;
+    height: 20px;
+}
+
+#get_book_author_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#edit_book_modal{
+    position: absolute;
+    border-radius: 7px;
+    width: 100%;
+    min-height: 300px;
+    top: 20%;
+    background-color: #bbf1f3;
+}
+
+#get_book_edit_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    height: 25px;
+}
+#get_book_edit_form>input{
+    width: 75%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    height: 25px;
+    margin-left: 2%;
+}
+#get_book_edit_form>input::placeholder{
+    font-weight: 600;
+    font-size: 16px;
+}
+#get_book_edit_form>button{
+    height: 100%;
+    width: 25%;
+    margin:0; padding:0;
+    margin-right: 2%; margin-left: 2%;
+}
+
+#edit_book_modal{
+    box-shadow: 0 0 15px 0 black;
+}
+#edit_book_modal_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#edit_book_form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+#edit_book_form>div{
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#edit_book_form>div>input{
+    width: 25%;
+    font-weight: 600;
+    margin-right: 1%;
+    margin-bottom: 10px;
+}
+#edit_book_form>textarea{
+    min-height: 50px;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-weight: 600;
+}
+
+#edit_book_form>button{
+    margin: auto;
+    margin-top: 10px;
+}
+
+#background_wall{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.637);
+    z-index: 1;
+}
+
+.error{
+    color:red;
+    text-align: center;
+}
+
+.success{
+    color:blue;
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
+
+@media (min-width:500px){
+    #edit_book_modal{
+        width: 80%;
+        left:10%;
+    }
+    #get_book_edit_form>button{
+        height: 30px;
+    }
+    button{
+        width: 150px;
+        height: 80px;
+        font-size: 1.1rem;
+    }
+    #add_book_form>button{
+        width: 95px;
+    }
+    #delete_book_form>button{
+        width: 80px;
+        height: 35px;
+    }
+    #get_book_name_form>button{
+        width: 80px;
+        height: 35px;
+    }
+    #get_book_author_form>button{
+        width: 80px;
+        height: 35px;
+    }
+}
+
+@media (min-width: 700px){
+    .search_modal{
+        width: 525px;
+        left: 15%;
+    }
+}
+
+@media (min-width: 800px){
+    button{
+        width: 175px;
+    }
+    .modal{
+        height: 450px;
+    }
+    #add_book_form>textarea{
+        height: 120px;
+    }
+    #add_book_form>button{
+        height: 40px;
+    }
+    .search_modal{
+        left:20%;
+    }
+    #edit_book_modal{
+        width: 70%;
+        left:15%;
+    }
+}
+
+@media (min-width: 1000px){
+    .modal{
+        width: 750px;
+        left:15%;
+    }
+    .search_modal{
+        left:25%;
+    }
+    #edit_book_modal{
+        width: 80%;
+        left:10%;
+    }
+    #edit_book_modal{
+        width: 700px;
+        left: 17%;
+    }
+}
+
+@media (min-width: 1150px){
+    .modal{
+        left:20%;
+    }
+    .search_modal{
+        left:30%;
+    }
+    img{
+        margin-left: 5%;
+    }
+    #edit_book_modal{
+        left: 23%;
+    }
+}

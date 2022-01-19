@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+body>hr:first-child(1){
+    margin-top: 200px;
+}
+
+.error_404{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.error_404>h1{
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+p{
+    color:rgba(0, 0, 0, 0.74);
+}
+
+b{
+    color:black;
+}
+
+hr{
+    width: 100%;
+    color:black;
+    border: black solid 2px;
+}
+
+img{
+    width: 350px;
+    height: 240px;
+}
+
+@media (min-width: 500px){
+    .error_404>h1{
+        font-size: 3.7rem;
+    }
+    img{
+        width: 450px;
+        height: 300px;
+    }
+}

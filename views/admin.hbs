@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href='/stylesheets/admin.css'>
+        <link rel="icon" type="image/x-icon" href="/Book fav.png">
+        <title>uBook: Admin</title>
+    </head>
+
+    <body>
+        <div id='background_wall' class='hidden'></div>
+        <header>
+            <div>Admin Page</div>
+        </header>
+
+        <main>
+            <h4 id='admin_logout'>Logout</h4>
+            <h2><u>Controls</u></h2>
+            <div id='admin_controls'>
+                <div class='get_set_container'>
+                    <button id='get_book_name'>GET by Name</button>
+                    <button id='get_book_author'>GET by Author</button>
+                    <button id='get_book_all'>GET ALL</button>
+                </div>
+                <div class='get_set_container'>
+                    <button id='add_book'>ADD Book</button>
+                    <button id='edit_book'>EDIT Book</button>
+                    <button id='delete_book'>DELETE Book</button>
+                </div>
+            </div>
+            <h2><u>Results</u><span id='reset_results'>Clear</span></h2>
+
+            <div id='book_results_container'>
+    
+            </div>
+
+            <!--            Requests Modals                 -->
+
+            <!-- Add Book Request -->
+            <div id='add_book_modal' class='hidden'>
+                <h2>Add Book</h2>
+                <form id='add_book_form'>
+                    <input type='text' placeholder="Name">
+                    <input type='text' placeholder="Author">
+                    <input type='text' placeholder="Year">
+                    <input type='text' placeholder="Genre">
+                    <textarea placeholder="Description"></textarea>
+                    <input type='file' id='book_cover'>
+                    <button type='submit'>Add</button>
+                </form>
+                <h2 id='add_book_close'>Close</h2>
+            </div>
+
+            <!-- Delete Book Request -->
+            <div id='delete_book_modal' class='hidden'>
+                <h2>Delete Book</h2>
+                <form id='delete_book_form'>
+                    <input type='text' placeholder="Book Name">
+                    <button type='submit'>Delete</button>
+                </form>
+                <h2 id='delete_book_close'>Close</h2>
+            </div>
+
+            <!-- Get Book By Name -->
+            <div id='get_book_name_modal' class='hidden'>
+                <h2>Find Book By Name</h2>
+                <form id='get_book_name_form'>
+                    <input type='text' placeholder="Book Name">
+                    <button type='submit'>Search</button>
+                </form>
+                <h2 id='get_book_name_close'>Close</h2>
+            </div>
+
+            <!-- Get Book By Author -->
+            <div id='get_book_author_modal' class='hidden'>
+                <h2>Find Book by Author</h2>
+                <form id='get_book_author_form'>
+                    <input type='text' placeholder="Book Author">
+                    <button type='submit'>Search</button>
+                </form>
+                <h2 id='get_book_author_close'>Close</h2>
+            </div>
+
+            <!-- Edit Book Modal -->
+            <div id='edit_book_modal' class='hidden'>
+                <h2>Edit Book</h2>
+                <form id='get_book_edit_form'>
+                    <input type='text' placeholder='Book Name to Edit'>
+                    <button type='submit'>Edit</button>
+                </form>
+                <p class='hidden'></p>
+                <h2>Book</h2>
+                <form id='edit_book_form'>
+                    <div>
+                        <input type='text' placeholder='Book Name' disabled>
+                        <input type='text' placeholder='Author' disabled>
+                        <input type='text' placeholder='Year' disabled>
+                        <input type='text' placeholder='Genre' disabled>
+                    </div>
+                    <textarea type='text' placeholder='Description' disabled></textarea>
+                    <button type='submit' disabled>Edit Book</button>
+                </form>
+                <p class='hidden'></p>
+                <h2 id='edit_book_modal_close'>Close</h2>
+            </div>
+
+        </main>
+    </body>
+    <script src='/javascript/admin.js'></script>
+</html>

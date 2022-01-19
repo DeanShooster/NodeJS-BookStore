@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/img/Book fav.png">
+        <link rel="stylesheet" href='/stylesheets/index.css'>
+        <title>uBook</title>
+    </head>
+
+    <body>
+        <div id='block_background' class='hidden'></div>
+        <header>
+            <div id='shop_name'><img src='./img/logo.png'></div>
+            <div id='header_container'>
+                <div id='user_interface'>Login</div>
+                <div id='user_settings' class='hidden'></div>
+                    <div id='user_settings_modal' class='hidden'>
+                        <div id='edit_user'>Edit User</div>
+                        <div id='logout'>Logout</div>
+                    </div>
+                <div id='cart'>Cart</div>
+                <div id='about'>About</div>
+            </div>
+        </header>
+
+        <main>
+            <div>
+                <form id='book_search'>
+                    <input id='search_filter' type='text' placeholder='Search for Book' autocomplete="off">
+                </form>
+            </div>
+            <hr>
+            <div id='book_container'>
+
+            </div>
+
+        </main>
+        <hr>
+        <div id='pagination_container'>
+            <div id='prev_page' class='arrow left hidden'></div>
+            <p id='page_number'>1</p>
+            <div id='next_page' class='arrow right'></div>
+        </div>
+        <footer>
+            <div id='contact_us'>Contact us <hr></div>
+            <div id='terms&conditions'>Terms and Conditions<hr></div>
+            <div id='privacy'>Privacy policy</div>
+        </footer>
+
+    <!-- Hidden/Visible modals upon user interface. -->
+
+        <!-- User Login modal -->
+        <div id='login_register' class='hidden'>
+            <h2>Log In</h2>
+            <form id='login_form'>
+                <input type='text' placeholder="Email">
+                <input type='password' placeholder="Password">
+                <div>
+                    <button type='submit'>LogIn</button>
+                    <button id='register'>Register</button>
+                </div>
+                <p id='login_error_message'></p>
+            </form>
+            <h2 id='close_login_form'>Close</h2>
+        </div>
+
+        <!-- User Register modal -->
+        <div id='register_modal' class='hidden'>
+            <h2>Register</h2>
+            <form id='register_form'>
+                <input type='text' placeholder='Name' autocomplete="off" required>
+                <input type='text' placeholder='Email'required>
+                <input type='password' placeholder='Password' required>
+                <button id='create_user'>Register</button>
+                <p id='register_error_message'></p>
+            </form>
+            <h2 id='back_to_login'>Back</h2>
+        </div>
+
+        <!-- Edit User modal -->
+        <div id='edit_user_modal' class='hidden'>
+            <h2>Edit User</h2>
+            <p>Edit any field of your choice. Leave it empty otherwise.</p>
+            <form id='edit_user_form'>
+                <input type='text' placeholder="Name" autocomplete="off">
+                <input type='text' placeholder="Email" autocomplete="off">
+                <input type='password' placeholder="Password">
+                <input type='password' placeholder='Repeat Password'>
+                <button type='submit'>Edit</button>
+                <p id='error_password'></p>
+            </form>
+            <h2 id='close_edit_user'>Close</h2>
+        </div>
+
+        <!-- About modal -->
+        <div id='about_modal' class='hidden'>
+            <ul>
+                <li>
+                    Project uBook represents a book store web app with basic user/admin interface which controlled by nodeJS backend functionally such as tokens,auth and validators.
+                </li>
+                <li>
+                    API manipulation.
+                </li>
+                <li>
+                    MongoDB / Mongoose featured as data base.
+                </li>
+                <li>
+                    Vanilla HTML/CSS/JS.
+                </li>
+                <li>
+                    One HTML modal theme store.
+                </li>
+            </ul>
+            <h3 id='close_about_modal'>Close</h3>
+        </div>
+
+        <!-- Contact Us modal -->
+        <div id='contact_us_modal' class='hidden'>
+            <h2>Contact Us</h2>
+            <p>Fill the form below.</p>
+            <form id='contact_us_form'>
+                <input type='text' placeholder="Name">
+                <textarea type='text' placeholder="Message" rows='10'></textarea>
+                <button type='submit'>Send</button>
+            </form>
+            <h3 id='contact_us_close'>Close</h3>
+        </div>
+
+        <!-- Terms and conditions modal -->
+        <div id='terms_conditions_modal' class='hidden'>
+            <h1>Terms and Conditions</h1>
+            <p>The Company is under no obligation to post, maintain, or otherwise use any Submission you may provide. You understand and agree that the Company may, but is not obligated to, review the Website and may delete, remove (without notice) or refuse to post any Submission in its sole discretion, for any reason or no reason, including Submissions that in the Company's sole judgment might be offensive, illegal, or that might violate the rights, harm, or threaten the safety of users or others. You are solely responsible at your sole cost and expense for creating backup copies and replacing any Submissions you post or store on the Website or provide to the Company.</p>
+            <h3>User Submissions</h3>
+            <p>You are solely responsible for any Submission that you Post. You may not Post any Submission that you did not create or that you do not have permission to Post. You represent and warrant that any Submission or other content and information that you submit to the Company or the Website:</p>
+            <h3>Rights Granted to the Company</h3>
+            <p>By posting to the Website, you grant the Company a royalty-free, irrevocable, perpetual, non-exclusive license to use your Submission. This includes, without limitation, the license rights to: copy, distribute, reproduce, modify, edit, publish, transmit, translate, reformat, create derivative works from, display, perform, and otherwise use such Submissions in whole or in part, on a worldwide basis; to incorporate such Submissions into other works, in any form, media or technology now known or later developed, including for promotional or marketing purposes; to publish your name in connection with your Submission; and the right to sublicense such rights to any user of the Website. No compensation will be paid with respect to the use or license of your Submission, as provided herein.</p>
+            <h3 id='terms_conditions_close'>Close</h3>
+        </div>
+
+        <!-- Privacy modal -->
+        <div id='privacy_modal' class='hidden'>
+            <h1>Privacy Policy</h1>
+            <p>By using this website you are knowingly and willingly agreeing to be bound by this Privacy Policy and understand that this Privacy Policy shall constitute a binding and enforceable contract.
+                This Privacy Policy sets forth the information gathering and sharing practices of the Company on the Website. If you do not agree to this Privacy Policy, you may not use this Website.</p>
+            <h3>Modifications</h3>
+            <p>The Company may, in its sole discretion and at any time, modify this Privacy Policy, in whole or in part, by posting such modifications on the Website. Your continued use of the Website following the posting of changes will operate as an acknowledgement of your acceptance of and agreement to be bound by the then current Privacy Policy. 
+                The Privacy Policy will include the date the Company last updated the Privacy Policy.</p>
+            <h3>Collection of Information</h3>
+            <p>The information that you provide to the Website or that is automatically collected is not sold to other parties, but may be disclosed as we deem appropriate in connection with operating and/or providing services through the Website.</p>
+            <p>The Website does not track, collect, or distribute personal or identifying information such as name, address, email address, telephone number, credit card information or any other information that might reasonably be used to identify users personally</p>
+            <h3 id='privacy_close'>Close</h3>
+        </div>
+
+        <!-- Book Modal -->
+        <div id= 'book_modal_container'>
+            <div id='book_information' class='hidden'>
+                <h2><u>Book Information</u></h2>
+                <button id='add_book_cart'>Add Book</button>
+                <h3 id='book_information_close'>Close</h3>
+            </div>
+        </div>
+        
+        <!-- Cart Modal -->
+        <div id='cart_modal' class='hidden'>
+            <h1><u>User Cart</u></h1>
+            <div id='cart_book_container'>
+
+            </div>
+            <button id='buy_books'>Buy</button>
+            <h3 id='cart_close'>Close</h3>
+        </div>
+
+    </body>
+    <script src='/javascript/index.js'></script>
+</html>

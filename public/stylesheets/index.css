@@ -1,0 +1,806 @@
+body{
+    margin: 0;
+    font-family:"Open Sans", "Oxygen", "Comic Neue", "Kalam", "Roboto", sans-serif, cusrive;
+    background-color: rgb(243, 240, 240);
+    color: #dee2e6;
+}
+hr{
+    border: #146264 solid 3px;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #85bfc0;
+    box-shadow: 0 0 15px 0 black;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+#shop_name{
+    width: 40%;
+}
+
+#shop_name>img{
+    margin-left: 10px;
+    width: 100px;
+    height: 70px;
+}
+
+#header_container{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+#header_container>h4{
+    display: none;
+}
+
+#header_container>div{
+    margin-right: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(0,0,0,.6);
+}
+
+#header_container>div:hover{
+    cursor: pointer;
+    color:rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px black;
+}
+
+main>div:nth-child(1){
+    width: 100%;
+    margin-top: 70px;
+}
+
+#cart_modal{
+    position: fixed;
+    text-align: center;
+    width: 75%; min-height: 520px;
+    left:12.5%;
+    top:100px;
+    background-color: #a1e3e6;
+    box-shadow: 0px 0px 25px 0px #000000;
+    color: rgba(0,0,0,.6);
+    border-radius: 5px;
+}
+
+#cart_close:hover{
+    color:darkorange;
+    cursor: pointer;
+}
+
+#cart_book_container{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow:auto;
+}
+#cart_book_container>div{
+    margin-left: 5%;
+    font-size: 1rem;
+}
+#cart_book_container>div>img{
+    margin-top: 15px;
+    box-shadow: 0 0 9px 0 black;
+}
+
+.cart_book_container_empty{
+    font-size: 30px;
+}
+
+#cart_book_title{
+    color:rgba(0, 0, 0, 0.63);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#buy_books{
+    color:white;
+    background-color: darkorange;
+    border-radius: 5%;
+    font-size: 20px;
+    border:none;
+    width: 75px;
+}
+
+#buy_books:hover{
+    color:darkorange;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+
+#book_search{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #8cc3c4e0;
+    margin-bottom: 25px;
+}
+
+#book_search>input{
+    margin: 5px;
+    width: 80%;
+    height: 70%;
+    border: 2px solid black;
+    border-radius: 5%;
+    color:black;
+    text-shadow: 0 0 2px black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#book_search>input::placeholder{
+    color: black;
+    text-shadow: 0 0 2px black;
+}
+
+#book_container{
+    margin-top: 20px;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color:rgba(0, 0, 0, 0.829);
+    text-align: center;
+}
+
+#book_container>div{
+    height: 250px;
+    margin-left: 3%;
+    margin-right: 3%;
+    color: rgba(0, 0, 0, 0.76);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+#book_container>div>img{
+    width: 140px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 black;
+}
+#book_container>div>img:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: skewX(12deg) scale(1.1);
+    box-shadow: 0 5px 15px 5px black;
+}
+
+.book_modal{
+    position: fixed;
+    top:25%;
+    width: 100%;
+    min-height: 300px;
+    background-color: #a5d0d1;
+    border-radius: 10px;
+    color: rgba(0,0,0,.6);
+    box-shadow: 0 0 15px 0 black;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.book_modal>p{
+    padding-left: 5%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#book_information_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#add_book_cart{
+    background-color: darkorange;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    font-size: 18px;
+}
+
+#add_book_cart:hover{
+    cursor: pointer;
+    background-color: white;
+    color:darkorange;
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+
+
+#pagination_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#pagination_container>div{
+    margin-top: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+#page_number{
+    font-size: 16px;
+    font-weight: 600;
+    color:black;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow: 1px 1px 0 black;
+}
+
+.arrow{
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    border-radius: 3px;
+}
+
+.right{
+    transform: rotate(45deg);
+}
+.left{
+    transform: rotate(-135deg);
+}
+
+#next_page:hover{
+    cursor: pointer;
+}
+#prev_page:hover{
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    background-color: #a5d0d1e0;
+    color: rgba(0,0,0,.6);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>div{
+    font-weight: 900;
+}
+
+footer>div>hr{
+    border: solid #146264 .5px;
+}
+
+footer>div:hover{
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+}
+
+footer>div:nth-child(3){
+    margin-bottom: 9px;
+}
+
+.hidden{
+    display: none;
+}
+
+#block_background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.visible_background{
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 1;
+}
+
+#login_form{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login_form>input{
+    width: 100%;
+    height: 13%;
+    border-radius: 5%;
+    border: 3px solid white;   
+    margin-bottom: 15px;
+    color:black;
+    text-shadow: 0 0 2px black;
+    font-size: 16px;
+}
+
+#login_form>input::placeholder{
+    color:black;
+    text-shadow: 0 0 2px black;
+}
+
+#login_form>div{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#login_form>div>button{
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: 7%;
+    background-color: #2e353d;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    color:white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#login_form>div>button:hover{
+    cursor: pointer;
+}
+
+#close_login_form:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#login_error_message{
+    color:red;
+}
+
+.visible_modal{
+    position: fixed;
+    top:30%;
+    width: 100%;
+    min-height: 300px;
+    background-color: #212529;
+    box-shadow: 0px 0px 15px 0px #000000;
+    border-radius: 5%;
+    font-size: 14px;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about_modal>ul{
+    padding-right: 2%;
+}
+
+#about_modal>ul>li{
+    margin-bottom: 15px;
+    font-weight: 600;
+    color:white;
+}
+
+#about_modal>h3{
+    color:white;
+    text-shadow: 
+        2px 2px 0 black;
+}
+
+#about_modal>h3:hover{
+    cursor: pointer;
+    color: orange;
+}
+
+#register_form{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#register_form>input{
+    width: 100%;
+    height: 13%;
+    border-radius: 5%;
+    border: 3px solid white;   
+    margin-bottom: 15px;
+    color:black;
+    text-shadow: 0 0 2px black;
+    font-size: 16px;
+}
+#register_form>button{
+    display: block;
+    width: 50%;
+    height: 15%;
+    border-radius: 7%;
+    background-color: #2e353d;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    color:white;
+    font-size: 16px;
+    font-weight: 600;
+}
+#back_to_login:hover{
+    cursor: pointer;
+    color:orange;
+}
+
+#privacy_modal{
+    position: fixed;
+    top: 7%;
+    left:10%;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0px 0px 15px 0px #000000;
+    overflow: scroll;
+    z-index: 1;
+}
+
+#privacy_modal>h1,h3{
+    text-align: center;
+    margin-bottom: 5px;
+    color:black;
+}
+#privacy_modal>p{
+    padding: 2%;
+    margin:0;
+    color:black;
+}
+#privacy_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#terms_conditions_modal{
+    position: fixed;
+    top: 7%;
+    left:10%;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0px 0px 15px 0px #000000;
+    overflow: scroll;
+    z-index: 1;
+}
+#terms_conditions_modal>h1,h3{
+    text-align: center;
+    margin-bottom: 5px;
+    color:black;
+}
+#terms_conditions_modal>p{
+    padding:2%;
+    margin:0;
+    color:black;
+}
+#terms_conditions_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#contact_us_modal{
+    position: fixed;
+    width: 70%;
+    height: 60%;
+    top:20%;
+    left: 15%;
+    background-color: rgb(121, 208, 211);
+    box-shadow: 0px 0px 15px 0px #000000;
+    border-radius: 15%;
+    text-align: center;
+    color:rgb(33, 91, 109);
+    font-family:fantasy;
+    z-index: 1;
+}
+
+#contact_us_form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact_us_form>input{
+    margin-top: 5px;  margin-bottom: 15px;
+    border: rgb(41, 107, 116) solid 2px;
+    border-radius: 10%;
+    font-weight: 600;
+    text-shadow: 0 0 1px black;
+    width: 70%;
+}
+#contact_us_form>textarea{
+    border: rgb(41, 107, 116) solid 2px;
+    width: 85%;
+    color:black;
+    font-weight: 600;
+    text-shadow: 0 0 1px black;
+}
+#contact_us_form>button{
+    margin-top: 25px;
+    background-color: darkorange;
+    border:none;
+    border-radius: 5%;
+    color:white;
+    width: 70px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 16px;
+}
+#contact_us_form>button:hover{
+    cursor: pointer;
+    color: darkorange;
+    background-color: white;
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+
+#contact_us_close{
+    color:rgb(41, 107, 116);
+}
+#contact_us_close:hover{
+    cursor: pointer;
+    color:darkorange;
+}
+
+#user_settings_modal{
+    position: absolute;
+    width: 175px;
+    height: 75px;
+    top:70px;
+    right: 11%;
+    background-color: #98dee0;
+    box-shadow: 0px 0px 5px 0px #000000;
+    border-radius: 4%;
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#user_settings_modal>div{
+    margin:auto;
+}
+#user_settings_modal>div:hover{
+    color:darkorange;
+}
+
+#edit_user_modal{
+    position: fixed;
+    width: 70%;
+    height: 60%;
+    top:20%;
+    left: 15%;
+    background-color: rgb(121, 208, 211);
+    box-shadow: 0px 0px 15px 0px #000000;
+    border-radius: 2%;
+    text-align: center;
+    color:rgb(33, 91, 109);
+    font-family:fantasy;
+    z-index: 1;
+}
+
+#edit_user_form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#edit_user_form>input{
+    margin-top: 10px;
+    border-radius: 2%;
+    border:none;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+#edit_user_form>button{
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 80px;
+    height: 30px;
+    background-color: darkorange;
+    border-radius: 3%;
+    color:white;
+    border:none;
+}
+#edit_user_form>button:hover{
+    cursor: pointer;
+    color:darkorange;
+    background-color: white;
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+#close_edit_user:hover{
+    color:darkorange;
+    cursor: pointer;
+}
+#error_password{
+    color:red;
+}
+
+#added_book_note{
+    color:red;
+}
+.error{
+    color:red;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background: #6fabace0;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #4b9192;
+}
+
+.add_book_effect{
+    transition: 0.6s;
+    animation: dance linear 0.3s;
+}
+
+@media (min-width:500px){
+    .visible_modal{
+        font-size: 16px;
+    }
+    #contact_us_form>input{
+        width: 240px;
+    }
+}
+@media (min-width: 600px){
+    #login_register,#register_modal{
+        width: 75%;
+        left: 12.5%;
+    }
+    #edit_user_modal{
+        width: 410px;
+        height: 440px;
+    }
+}
+
+@media (min-width: 650px){
+    #privacy_modal{
+        overflow:visible;
+    }
+    #contact_us_form>textarea{
+        width: 380px;
+    }
+    #edit_user_modal{
+        left: 20%;
+    }
+}
+
+@media (min-width: 700px){
+    .visible_modal{
+        width: 75%;
+        left:12.5%;
+    }
+    #header_container>div{
+        margin-right: 30px;
+    }
+    #edit_user_modal{
+        left: 25%;
+    }
+}
+
+@media (min-width:800px){
+    .visible_modal{
+        width: 50%;
+        height: 300px;
+        left:25%;
+    }
+    #header_container>div{
+        margin-right: 40px;
+    }
+    #login_register,#register_modal{
+        width: 550px;
+        height: 300px;
+        left:25%;
+    }
+    footer{
+        height: 50px;
+        flex-flow: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+    footer>div{
+        font-size: 16px;
+    }
+    footer>div>hr{
+        display: none;
+    }
+
+    #privacy_modal{
+        width: 70%;
+        left:15%;
+    }
+    #terms_conditions_modal{
+        width: 90%;
+        left:5%;
+        overflow: hidden;
+    }
+    #contact_us_modal{
+        width:550px;
+        left:25%;
+    }
+    #edit_user_modal{
+        left: 30%;
+    }
+
+    .book_modal{
+        width: 75%;
+        left:12.5%;
+    }
+}
+
+@media (min-width:1000px){
+    #header_container>div{
+        font-size: 26px;
+        margin-right: 40px;
+    }
+    #login_register,#register_modal{
+        left:30%;
+    }
+    #privacy_modal{
+        width: 50%;
+        left:25%;
+    }
+    #terms_conditions_modal{
+        width: 70%;
+        left:15%;
+    }
+    #contact_us_modal{
+        left:30%;
+    }
+    #edit_user_modal{
+        left: 35%;
+    }
+    .book_modal{
+        width: 50%;
+        left:25%;
+    }
+}
+
+@media (min-width:1200px){
+    #privacy_close,#terms_conditions_close{
+        margin-top: 45px;
+    }
+}
+
+
+.juggle_move{
+    animation: juggle linear alternate .3s 3;
+}
+
+@keyframes juggle{
+    0%{ }
+    33% { transform: scale(1.15) skew( 6deg); color:red; }
+    66% { transform: skew(-6deg); }
+    100%{ transform: scale(1.15) skew(0); color:red;}
+}
+
+@keyframes dance{
+    0%{
+        transform: scale(0.01);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
