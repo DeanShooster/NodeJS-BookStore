@@ -14,9 +14,10 @@ This API is a basic example of a REST API backend application.
 It is build with Node.js and Express Framework with Javascript. In addition the application's database is MongoDB with the use of ODM like Mongoose.
 Additionally the application has basic authentication and authorization functionality with the use of JWT.
 
-The application is a one page modal app with a basic UI.
-Users can browse trough books, signup, login, edit and delete their data. In addition, each user has their own cart where they can store books they are willing to purchase and checkout if they wish too.
-Furthermore there is an admin page where admin can get information about the stored books and basic functionally of adding, editing and deleting books.
+- The application is a one page modal app with a basic UI.
+- Users can browse trough books, signup, login, edit and delete their data. 
+- In addition, each user has their own cart where they can store books they are willing to purchase and checkout if they wish too.
+- Furthermore there is an admin page where admin can get information about the stored books and basic functionally of adding, editing and deleting books.
 <hr>
 <h2 align="center">Build With </h2>
 
