@@ -28,4 +28,10 @@ Additionally the application has basic authentication and authorization function
 -   [JWT](https://www.npmjs.com/package/jsonwebtoken)
 -   [Validator.js](https://www.npmjs.com/package/validator)
 -   [HBS](https://www.npmjs.com/package/hbs)
+<hr>
+<h2 align="center">Demo Videos</h2>
+
+**<u>Demo User</u>**
+
+https://user-images.githubusercontent.com/92792238/165279648-6a9fecc6-5d4c-45aa-94ea-c99c41e1a52c.mp4
 
